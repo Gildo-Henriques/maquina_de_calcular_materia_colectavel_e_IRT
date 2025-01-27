@@ -30,7 +30,7 @@
     const salarioBruto = salarioBase + parseFloat(subAli.value) + parseFloat(subTrans.value) 
     // CONSTANTE QUE CALCULA A SEGURANÇA SOCIAL
     const segurancaSocial = salarioBruto * 0.03
-    MateriaColectavel = salarioBase - segurancaSocial 
+    MateriaColectavel = salarioBase - segurancaSocial
     console.log("salario bruto:", salarioBruto)
     resultadoSalarioBruto.innerHTML = salarioBruto
     resultadoSegurancaSocial.innerHTML = segurancaSocial
