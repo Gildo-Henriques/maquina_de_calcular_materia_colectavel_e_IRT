@@ -29,14 +29,11 @@ function FecharFolhaSalarial(){
   }
 // Materia Colectável
 function materiaColectavel(){
-    if (subsidioDeAlimentacao.value.trim() === '' || subsidioDeTransporte.value.trim() === ''){
-        subsidioDeAlimentacao.value = 0
-        subsidioDeTransporte.value = 0
-                 }
+
     
- const valorDoSalarioBase = parseFloat(salarioBase.value)
- let valorDoSubsidioDeTransporte = parseFloat(subsidioDeTransporte.value)
- let valorDoSubsidioDeAlimentacao = parseFloat(subsidioDeAlimentacao.value)
+ const valorDoSalarioBase = parseFloat(salarioBase.value) || 0
+ let valorDoSubsidioDeTransporte = parseFloat(subsidioDeTransporte.value) || 0
+ let valorDoSubsidioDeAlimentacao = parseFloat(subsidioDeAlimentacao.value) || 0
  const valorDoSalarioBruto = parseFloat(salarioBase.value) + parseFloat(subsidioDeTransporte.value) + parseFloat(subsidioDeAlimentacao.value)
  const valorDaSegurancaSocial = valorDoSalarioBruto * 0.03
  if (valorDoSubsidioDeAlimentacao > 30000 || valorDoSubsidioDeTransporte > 30000){
